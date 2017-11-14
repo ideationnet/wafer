@@ -1,0 +1,48 @@
+{
+  "name": "ideationnet/wafer",
+  "type": "library",
+  "description": "Very Thin, no-framework PHP",
+  "keywords": ["ideationnet", "wafer"],
+  "homepage": "https://github.com/ideationnet/wafer",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Darren Mothersele",
+      "email": "darren@darrenmothersele.com",
+      "homepage": "http://www.darrenmothersele.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "~7.0",
+    "ideationnet/invoker-router-middleware": "^1.0",
+    "ideationnet/stack-runner": "^4.0",
+    "php-di/php-di": "^5.4",
+    "zendframework/zend-diactoros": "^1.6",
+    "middlewares/utils": "^0.13.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "IdNet\\Wafer\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "IdNet\\WaferTest\\": "tests"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1-dev"
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+    "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.4",
+    "squizlabs/php_codesniffer": "^3.1"
+  }
+}
