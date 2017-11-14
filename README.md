@@ -30,7 +30,7 @@ And then just **run** it by creating an `index.php`:
 <?php
 
 use IdNet\Wafer\Application;
-use YtProxy\Hello;
+use Example\Hello;
 
 require __DIR__.'/../vendor/autoload.php';
 
